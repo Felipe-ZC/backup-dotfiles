@@ -1,0 +1,89 @@
+! This is the global resources file that is loaded when
+! all users log in, as well as for the login screen
+
+! Fix the Xft dpi to 96; this prevents tiny fonts
+! or HUGE fonts depending on the screen size.
+!Xft.dpi: 96
+
+! hintstyle: medium means that (for Postscript fonts) we
+! position the stems for maximum constrast and consistency
+! but do not force the stems to integral widths. hintnone,
+! hintslight, and hintfull are the other possibilities.
+!Xft.hintstyle: hintmedium
+!Xft.hinting: true
+
+!URxvt.letterSpace: -1 
+xterm*ScrollBar: false
+
+urxvt.iso14755: false
+urxvt.iso14755_52: false
+
+urxvt.cursorBlink: true
+urxvt.urgentOnBell: true
+urxvt.cursorUnderline: false
+urxvt.saveline: 2048
+
+urxvt.scrollBar: false
+urxvt.perl-ext-common: default,resize-font,font-size
+urxvt.font: xft: Inconsolata for Powerline:style=Medium:size=13
+
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
+
+	
+!URxvt*background: #1b1b1b
+URxvt*foreground: #cccaca
+ 
+!Black
+URxvt*color0: #222222
+URxvt*color8: #5b595a
+!Red
+URxvt*color1: #664742
+URxvt*color9: #664742
+!Green
+URxvt*color2: #A5AF86
+URxvt*color10: #A5AF86
+!Yellow
+URxvt*color3: #F7E7BD
+URxvt*color11: #F7E7BD
+!Blue
+URxvt*color4: #6e686f
+URxvt*color12: #6e686f
+!Magenta
+URxvt*color5: #966E6E
+URxvt*color13: #B09A91
+!Cyan
+URxvt*color6: #849492
+URxvt*color14: #849492
+!White
+URxvt*color7: #a49c9c
+URxvt*color15: #e9e6e6
+
+
+
+!URxvt*foreground: #c6a57b
+!!black
+!URxvt*color0: #101010
+!URxvt*color8: #404040
+!!red
+!URxvt*color1: #953331
+!URxvt*color9: #8D4A48
+!!green
+!URxvt*color2: #546A29
+!URxvt*color10: #7E9960
+!!yellow
+!URxvt*color3: #909737
+!URxvt*color11: #9CA554
+!!blue
+!URxvt*color4: #385E6B
+!URxvt*color12: #5C737C
+!!magenta
+!URxvt*color5: #7F355E
+!URxvt*color13: #95618B
+!!cyan
+!URxvt*color6: #34676F
+!URxvt*color14: #5D858A
+!!white
+!URxvt*color7: #dddddd
+!URxvt*color15: #dddddd
+
