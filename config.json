@@ -1,12 +1,14 @@
 {
-	"vim": "/home/zubuddy/.vimrc",
-	"xresources": "/home/zubuddy/.Xresources",
-	"picom": "/home/zubuddy/.config/picom.conf",
-	"i3": "/home/zubuddy/.config/i3/config",
-	"fonts": [
-		"/usr/share/fonts",
-		"/usr/share/texmf/fonts",
-		"/home/zubuddy/.local/share/fonts",
-		"/home/zubuddy/.fonts"
-	]
+	"dots": {
+		"vim": ["/home/zubuddy/.vimrc"],
+		"xresources": ["/home/zubuddy/.Xresources"],
+		"picom": ["/home/zubuddy/.config/picom.conf"],
+		"i3": ["/home/zubuddy/.config/i3/config"],
+		"fonts": [
+			"/usr/share/fonts",
+			"/usr/share/texmf/fonts",
+			"/home/zubuddy/.local/share/fonts",
+			"/home/zubuddy/.fonts"
+		]
+	}
 }
