@@ -7,6 +7,7 @@ import (
 	"log"
 	"os"
 	"path"
+	"path/filepath"
 	"example.com/dotfiles/pkg/domain"
 )
 
@@ -15,11 +16,7 @@ type ioSvc struct {
 }
 
 func NewIOSvc() domain.StdIOSvc {
-	return ioSvc {
-		//stdio: 	
-	}
-	//var stdio domain.StdIOSvc = ioSvc.stdio
-	//return stdio 
+	return ioSvc {}
 }
 
 func (stdio ioSvc) ReadCfgFile(filePath string) (domain.DotFileCfg, error) {
@@ -29,6 +26,7 @@ func (stdio ioSvc) ReadCfgFile(filePath string) (domain.DotFileCfg, error) {
 }
 
 func (stdio ioSvc) ProcessCfgFile(cfgFile domain.DotFileCfg) error {
+	processConfigOpts(cfgFile)
 	return nil 
 }
 
@@ -51,21 +49,17 @@ func readJsonFile(path string, dotCfg *domain.DotFileCfg) error {
 }
 
 func processConfigOpts(dotCfg domain.DotFileCfg) {
-	fmt.Println(dotCfg)
-    //for key, val := range dotCfg.dots {
-        //log.Printf("Copying %s...", key)
-        //switch val.(type) {
-            //case string:
-                //var destFileName string = filepath.Base(fmt.Sprint(val))
-                //var dest string = fmt.Sprintf("%s/%s/%s", defaultDestDir, key, destFileName)
-                //var err error = copyFileToDir(fmt.Sprint(val), dest)
-                //if err != nil {
-                    //log.Print(err)
-                //}
-            //case []interface{}:
-                //log.Printf("%s is a []string", val)
-        //}
-    //}
+	for resource, resourceFiles := range dotCfg.Dots {
+		log.Printf("Copying %s...", resource)
+		for _, resourcePath := range resourceFiles {
+			var destFileName string = filepath.Base(resourcePath)
+			var dest string = fmt.Sprintf("%s/%s/%s", "./test_dir", resource, destFileName)
+			var err error = copyFileToDir(resourcePath, dest)
+			if err != nil {
+				log.Print(err)
+			}
+		}
+	}
 }
 
 func copyFileToDir(sourcePath string, destPath string) error {

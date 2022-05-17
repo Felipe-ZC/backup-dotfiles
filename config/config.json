@@ -2,7 +2,7 @@
 	"dots": {
 		"vim": ["/home/zubuddy/.vimrc"],
 		"xresources": ["/home/zubuddy/.Xresources"],
-		"picom": ["/home/zubuddy/.config/picom.conf"],
+		"picom": ["/home/zubuddy/.config/picom/picom.conf"],
 		"i3": ["/home/zubuddy/.config/i3/config"],
 		"fonts": [
 			"/usr/share/fonts",
